@@ -30,7 +30,7 @@ import de.uniluebeck.itm.tcpip.Storage;
 public class ChangeMinGapQuery extends ChangeDoubleQ {
 
 	ChangeMinGapQuery(DataInputStream dis, DataOutputStream dos, String objectID) {
-		super(dis, dos, Constants.CMD_SET_VEHICLETYPE_VARIABLE, objectID,
+		super(dis, dos, objectID, Constants.CMD_SET_VEHICLETYPE_VARIABLE,
 				Constants.VAR_MINGAP);
 	}
 

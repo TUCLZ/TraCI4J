@@ -116,7 +116,7 @@ public abstract class ChangeObjectVarQuery<V> extends ChangeObjectStateQuery {
 	public static class ChangeDoubleQ extends ChangeObjectVarQuery<Double> {
 
 		ChangeDoubleQ(DataInputStream dis, DataOutputStream dos,
-				int commandID, String objectID, int variableID) {
+				String objectID, int commandID, int variableID) {
 			super(dis, dos, commandID, objectID, variableID);
 		}
 

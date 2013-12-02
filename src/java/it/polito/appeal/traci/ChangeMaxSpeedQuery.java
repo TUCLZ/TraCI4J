@@ -35,7 +35,7 @@ public class ChangeMaxSpeedQuery extends ChangeDoubleQ {
 
 	ChangeMaxSpeedQuery(DataInputStream dis, DataOutputStream dos,
 			String objectID) {
-		super(dis, dos, Constants.CMD_SET_VEHICLE_VARIABLE, objectID, Constants.VAR_MAXSPEED);
+		super(dis, dos, objectID, Constants.CMD_SET_VEHICLE_VARIABLE, Constants.VAR_MAXSPEED);
 	}
 
 }

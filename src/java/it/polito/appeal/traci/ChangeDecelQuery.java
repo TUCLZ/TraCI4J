@@ -31,7 +31,7 @@ public class ChangeDecelQuery extends ChangeDoubleQ {
 
 	ChangeDecelQuery(DataInputStream dis, DataOutputStream dos,
 			String objectID) {
-		super(dis, dos, Constants.CMD_SET_VEHICLETYPE_VARIABLE, objectID, Constants.VAR_DECEL);
+		super(dis, dos, objectID, Constants.CMD_SET_VEHICLETYPE_VARIABLE, Constants.VAR_DECEL);
 	}
 	
 	@Override

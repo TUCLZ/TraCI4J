@@ -31,7 +31,7 @@ public class ChangeAccelQuery extends ChangeDoubleQ {
 
 	ChangeAccelQuery(DataInputStream dis, DataOutputStream dos,
 			String objectID) {
-		super(dis, dos, Constants.CMD_SET_VEHICLETYPE_VARIABLE, objectID, Constants.VAR_ACCEL);
+		super(dis, dos, objectID, Constants.CMD_SET_VEHICLETYPE_VARIABLE, Constants.VAR_ACCEL);
 	}
 	
 	@Override

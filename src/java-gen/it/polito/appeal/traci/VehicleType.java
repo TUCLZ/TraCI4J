@@ -89,7 +89,7 @@ implements StepAdvanceListener
 	
 	private final ChangeMaxSpeedQuery csqvar_ChangeMaxSpeed;
 	
-	private final ChangeMinGapQuery csqvar_ChangeMinGap;
+	private final ChangeObjectVarQuery.ChangeDoubleQ csqvar_ChangeMinGap;
 	VehicleType (
 		DataInputStream dis,
 		DataOutputStream dos, 
@@ -186,8 +186,8 @@ implements StepAdvanceListener
 			}
 		};
 		
-		csqvar_ChangeMinGap = new ChangeMinGapQuery(dis, dos, id
-		)
+		csqvar_ChangeMinGap = new ChangeObjectVarQuery.ChangeDoubleQ(dis, dos, id
+		, it.polito.appeal.traci.protocol.Constants.CMD_SET_VEHICLETYPE_VARIABLE, it.polito.appeal.traci.protocol.Constants.VAR_MINGAP)
 		{
 			@Override
 			void pickResponses(java.util.Iterator<it.polito.appeal.traci.protocol.ResponseContainer> responseIterator)
@@ -279,9 +279,9 @@ implements StepAdvanceListener
 	}
 	
 	/**
-	 * @return the instance of {@link ChangeMinGapQuery} relative to this query.
+	 * @return the instance of {@link ChangeObjectVarQuery.ChangeDoubleQ} relative to this query.
 	 */
-	public ChangeMinGapQuery queryChangeMinGap() {
+	public ChangeObjectVarQuery.ChangeDoubleQ queryChangeMinGap() {
 		return csqvar_ChangeMinGap;
 	}
 	

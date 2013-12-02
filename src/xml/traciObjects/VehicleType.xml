@@ -22,6 +22,7 @@
 	</repos>
 	
 	<command>it.polito.appeal.traci.protocol.Constants.CMD_GET_VEHICLETYPE_VARIABLE</command>
+	<changeStateCommand>it.polito.appeal.traci.protocol.Constants.CMD_SET_VEHICLETYPE_VARIABLE</changeStateCommand>
 
 	<readQueries>
 		<readQuery>
@@ -100,13 +101,16 @@
 			</affects>
 		</changeStateQuery>
 		
+		
 		<changeStateQuery>
 			<name>ChangeMinGap</name>
-			<query>ChangeMinGapQuery</query>
+			<query>ChangeObjectVarQuery.ChangeDoubleQ</query>
+			<const>it.polito.appeal.traci.protocol.Constants.VAR_MINGAP</const>
 			<affects>
 				<affect>ReadMinGap</affect>
 			</affects>
 		</changeStateQuery>
+		
 	
 	</changeStateQueries>
 </traciClass>

@@ -24,6 +24,16 @@
 	<command>it.polito.appeal.traci.protocol.Constants.CMD_GET_LANE_VARIABLE</command>
 
 	<readQueries>
+	
+		<readQuery>
+			<name>ReadCount</name>
+			<enum>COUNT</enum>
+			<const>it.polito.appeal.traci.protocol.Constants.ID_COUNT</const>
+			<query>ReadObjectVarQuery.IntegerQ</query>
+			<returnType>java.lang.Integer</returnType>
+			<dynamic>false</dynamic>
+		</readQuery>
+	
 		<readQuery>
 			<name>ReadShape</name>
 			<enum>SHAPE</enum>
@@ -31,7 +41,10 @@
 			<query>ReadShapeQuery</query>
 			<returnType>java.awt.geom.Path2D</returnType>
 			<dynamic>false</dynamic>
-		</readQuery><readQuery>
+		</readQuery>
+		
+		
+		<readQuery>
             <name>ReadLength</name>
             <enum>LENGTH</enum>
             <const>it.polito.appeal.traci.protocol.Constants.VAR_LENGTH</const>

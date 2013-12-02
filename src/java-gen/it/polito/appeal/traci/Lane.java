@@ -51,6 +51,12 @@ implements StepAdvanceListener
 	public static enum Variable {
 		
 		/** 
+		 * Query "ReadCount"
+		 * @see {@link #queryReadCount}
+		 */
+		COUNT,
+		
+		/** 
 		 * Query "ReadShape"
 		 * @see {@link #queryReadShape}
 		 */
@@ -149,6 +155,14 @@ implements StepAdvanceListener
 		/*
 		 * initialization of read queries
 		 */
+		
+		addReadQuery(Variable.COUNT, 
+				new ReadObjectVarQuery.IntegerQ (dis, dos, 
+				it.polito.appeal.traci.protocol.Constants.CMD_GET_LANE_VARIABLE, 
+				id, 
+				it.polito.appeal.traci.protocol.Constants.ID_COUNT
+				
+				));
 		
 		addReadQuery(Variable.SHAPE, 
 				new ReadShapeQuery (dis, dos, 
@@ -299,6 +313,14 @@ implements StepAdvanceListener
 	
 	
 	
+	
+	
+	/**
+	 * @return the instance of {@link ReadObjectVarQuery} relative to this query.
+	 */
+	public ReadObjectVarQuery<java.lang.Integer> queryReadCount() {
+		return (ReadObjectVarQuery.IntegerQ) getReadQuery(Variable.COUNT);
+	}
 	
 	
 	/**
